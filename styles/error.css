@@ -1,7 +1,13 @@
-.no-label::after {
-    content: "Can't be zero";
+.bill-container,
+.no-of-people {
+    position: relative;
+}
+
+.bill-error,
+.error {
     position: absolute;
     right: 0;
+    top: 0;
     color: red;
     font-size: 12px;
     opacity: 0;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/index.css">
@@ -11,7 +11,6 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; position: absolute; bottom: 0; left: 0; right: 0;}
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -27,15 +26,15 @@
         <section class="left-section">
             <div class="bill-container">
                 <p class="label bill-label">Bill</p>
+                <p class="bill-error">Can't be blank</p>
                 <div class="input-container">
                     <input type="text" class="bill-input input" placeholder="0">
                     <img class="img-placeholder" src="images/icon-dollar.svg" alt="">
-                    <!-- <div class="none">0</div> -->
                 </div>
             </div>
 
             <div class="tip-container">
-                <p class="label tip-label">Select Tip %</p>
+                <p class="label tip-label">Select Tip <span class="tip-percent">%</span><p>
 
                 <div class="tips">
                     <button class="percent">5%</button>
@@ -49,12 +48,11 @@
 
             <div class="no-of-people">
                 <p class="label no-label">Number of People</p>
-
+                <p class="error">Can't be blank</p>
 
                 <div class="input-container">
                     <input type="text" class="no-of-people-input input" placeholder="0">
                     <img class="img-placeholder" src="images/icon-person.svg" alt="">
-                    <!-- <div class="none">0</div> -->
                 </div>
             </div>
 

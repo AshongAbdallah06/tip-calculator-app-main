@@ -9,8 +9,7 @@ AllTips.forEach((tipButton) => {
     tipButton.addEventListener('click', () => {
         tip = parseInt(tipButton.innerHTML);
 
-        tipButton.classList.add('button-clicked');
-        // console.log(tip)
+        document.querySelector('.tip-percent').innerHTML = `(${tip}%)`;
     });
 });
 
@@ -18,15 +17,15 @@ AllTips.forEach((tipButton) => {
 
 billIinput.addEventListener('click', (e) => {
     billIinputFunction();
-    // alert(billIinput.value)
 })
 
 billIinput.addEventListener('input', (e) => {
     if (+billIinput.value === 0) {
         billIinput.classList.add('no-of-people-error')
-        // alert("Can't be zero")
+        document.querySelector('.bill-error').style.opacity = 1;
     } else {
         billIinput.classList.remove('no-of-people-error')
+        document.querySelector('.bill-error').style.opacity = 0;
     }
 })
 
@@ -34,13 +33,12 @@ billIinput.addEventListener('input', (e) => {
 
 customInput.addEventListener('click', (e) => {
     customInputFunction();
-    // alert("hello")
 })
 
 customInput.addEventListener('input', (e) => {
     tip = Number(customInput.value);
-    // console.log(tip)
-    // alert("hello")
+
+    document.querySelector('.tip-percent').innerHTML = `(${tip}%)`;
 })
 
 
@@ -49,7 +47,6 @@ const numberLabel = document.querySelector('.no-label');
 
 noOfPeople.addEventListener('click', (e) => {
     noOfPeopleFunction();
-    // alert("hello")
 })
 
 
@@ -58,12 +55,12 @@ let totalAmount = document.querySelector('.total-amount');
 
 noOfPeople.addEventListener('input', (e) => {
     if (+noOfPeople.value === 0) {
-        noOfPeople.classList.add('no-of-people-error');
+        document.querySelector('.error').style.opacity = 1;
         tipAmount.innerHTML = '$0.00';
         totalAmount.innerHTML = '$0.00';
         // alert("Can't be zero")
     } else {
-        noOfPeople.classList.remove('no-of-people-error');
+        document.querySelector('.error').style.opacity = 0;
 
         let tipPerPerson = (billIinput.value * (tip / 100)) / noOfPeople.value;
         let totalPerPerson = ((parseFloat(billIinput.value) + tipPerPerson)) / noOfPeople.value;
@@ -72,3 +69,19 @@ noOfPeople.addEventListener('input', (e) => {
         totalAmount.innerHTML = `$${totalPerPerson.toFixed(2)}`;
     }
 });
+
+
+const resetButton = document.querySelector('.reset');
+
+function reset() {
+    billIinput.value = '';
+    customInput.value = '';
+    tip = 0;
+    document.querySelector('.tip-percent').innerHTML = '%'
+    noOfPeople.value = '';
+    tipAmount.innerHTML = '$0.00';
+    totalAmount.innerHTML = '$0.00';
+}
+resetButton.addEventListener('click', () => {
+    reset();
+})
