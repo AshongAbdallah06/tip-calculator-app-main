@@ -1,0 +1,12 @@
+.no-label::after {
+    content: "Can't be zero";
+    position: absolute;
+    right: 0;
+    color: red;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.no-of-people-error {
+    border: 1px solid red;
+}

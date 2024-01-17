@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/error.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -26,10 +27,10 @@
         <section class="left-section">
             <div class="bill-container">
                 <p class="label bill-label">Bill</p>
-                <div class="input">
-                    <input type="text" class="bill-input">
+                <div class="input-container">
+                    <input type="text" class="bill-input input" placeholder="0">
                     <img class="img-placeholder" src="images/icon-dollar.svg" alt="">
-                    <div class="none">0</div>
+                    <!-- <div class="none">0</div> -->
                 </div>
             </div>
 
@@ -37,12 +38,12 @@
                 <p class="label tip-label">Select Tip %</p>
 
                 <div class="tips">
-                    <div class="percent">5%</div>
-                    <div class="percent">10%</div>
-                    <div class="percent">15%</div>
-                    <div class="percent">15%</div>
-                    <div class="percent">50%</div>
-                    <input class="custom" placeholder="Custom">
+                    <button class="percent">5%</button>
+                    <button class="percent">10%</button>
+                    <button class="percent">15%</button>
+                    <button class="percent">15%</button>
+                    <button class="percent">50%</button>
+                    <input class="custom input" placeholder="Custom">
                 </div>
             </div>
 
@@ -50,10 +51,10 @@
                 <p class="label no-label">Number of People</p>
 
 
-                <div class="input">
-                    <input type="text" class="bill-input">
+                <div class="input-container">
+                    <input type="text" class="no-of-people-input input" placeholder="0">
                     <img class="img-placeholder" src="images/icon-person.svg" alt="">
-                    <div class="none">0</div>
+                    <!-- <div class="none">0</div> -->
                 </div>
             </div>
 
@@ -88,6 +89,6 @@
         Coded by <a href="#">Ashong Abdallah</a>.
     </footer>
 
-    <script src="index.js"></script>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

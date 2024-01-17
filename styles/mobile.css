@@ -1,0 +1,20 @@
+@media (max-width: 684px) {
+    main {
+        flex-direction: column;
+        margin-left: 100px;
+    }
+
+    .tips {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right-section {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .attribution {
+        bottom: -100px;
+        white-space: nowrap;
+    }
+}
