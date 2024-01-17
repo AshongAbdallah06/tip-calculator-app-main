@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: hsl(185, 41%, 84%);
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+header img {
+    height: 30px;
+}
+
+main {
+    display: flex;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.left-section {
+    /* background-color: lightblue; */
+    /* min-height: 300px; */
+    min-width: 300px;
+}
+
+p {
+    margin: 0;
+}
+
+.left-section .label {
+    color: hsl(183, 100%, 15%);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.input {
+    position: relative;
+}
+
+.img-placeholder,
+.none {
+    position: absolute;
+    top: 10px;
+}
+
+img {
+    height: 13px;
+    left: 10px;
+}
+
+.none {
+    right: 10px;
+    color: hsl(186, 14%, 43%);
+    font-size: 13px;
+}
+
+input {
+    /* font-size: 24px; */
+    background: hsl(189, 41%, 97%);
+    border-radius: 3px;
+    min-width: 87%;
+    padding: 10px;
+    padding-left: 30px;
+    border: none;
+}
+
+.tip-container,
+.no-of-people {
+    margin-top: 25px;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.percent {
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    background: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.custom {
+    background-color: yellow;
+    font-weight: 700;
+    width: 52px;
+    background: transparent;
+    color: hsl(183, 100%, 15%);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.custom::placeholder {
+    color: hsl(183, 100%, 15%);
+}
+
+
+
+.right-section {
+    padding: 20px;
+    max-height: 300px;
+    padding-top: 35px;
+    min-width: 250px;
+    border-radius: 10px;
+    background: hsl(183, 100%, 15%);
+    margin-left: 30px;
+    color: white;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.container .label {
+    font-size: 14px;
+}
+
+.per-person {
+    color: hsl(184, 14%, 56%);
+    font-size: 12px;
+}
+
+.amount {
+    font-size: 35px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    width: 85%;
+    padding: 10px 0;
+    background-color: hsl(186, 37%, 29%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    color: hsl(186, 50%, 24%);
+}
